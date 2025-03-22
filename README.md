@@ -88,7 +88,7 @@ Jika ingin berkontribusi, silakan fork repository ini dan buat pull request.
 ---
 
 ## 📞 Kontak
-Jika ada pertanyaan, hubungi saya di [GitHub](https://github.com/Me291) atau email saya di **your-email@example.com**.
+Jika ada pertanyaan, hubungi saya di [GitHub](https://github.com/Me291) atau email saya di **leavemenow.29@gmail.com**.
 
 ---
 
