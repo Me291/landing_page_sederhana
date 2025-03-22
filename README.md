@@ -44,18 +44,29 @@ Kemudian buka **http://127.0.0.1:8000/home/** di browser.
 ## 📂 Struktur Proyek
 ```
 landing_page_sederhana/
-│-- web/                 # Folder utama proyek Django
-│   │-- settings.py       # Konfigurasi Django
-│   │-- urls.py           # Routing utama
+│-- env/                 # Virtual environment (jika ada)
+│-- manage.py            # File manajemen Django
+│-- db.sqlite3           # Database default Django
+│-- requirements.txt     # File dependencies Python
+│-- Web/                 # Folder utama proyek Django
+│   │-- __init__.py      # Menandakan ini adalah paket Python
+│   │-- settings.py      # Konfigurasi Django
+│   │-- urls.py          # Routing utama
+│   │-- wsgi.py          # File untuk deployment
+│   │-- asgi.py          # File untuk deployment dengan ASGI
 │-- landing/             # Aplikasi utama
-│   │-- templates/
+│   │-- __init__.py      # Menandakan ini adalah paket Python
+│   │-- views.py         # Logika tampilan halaman
+│   │-- urls.py          # Routing aplikasi landing
+│   │-- templates/       # Folder untuk menyimpan template HTML
 │   │   │-- landing/
 │   │   │   │-- home.html   # Template halaman Home
 │   │   │   │-- about.html  # Template halaman About
-│   │-- views.py         # Logika tampilan halaman
-│   │-- urls.py          # Routing aplikasi landing
-│-- manage.py           # File manajemen Django
-│-- db.sqlite3          # Database default Django
+│   │-- static/          # Folder untuk menyimpan file statis (CSS, JS, images)
+│   │   │-- css/
+│   │   │   │-- style.css  # Contoh file CSS
+│   │   │-- images/      # Folder untuk gambar
+│   │   │-- js/         # Folder untuk JavaScript
 ```
 
 ---
@@ -88,7 +99,7 @@ Jika ingin berkontribusi, silakan fork repository ini dan buat pull request.
 ---
 
 ## 📞 Kontak
-Jika ada pertanyaan, hubungi saya di [GitHub](https://github.com/Me291) atau email saya di **leavemenow.29@gmail.com**.
+Jika ada pertanyaan, hubungi saya di [GitHub](https://github.com/Me291) atau email saya di **your-email@example.com**.
 
 ---
 
