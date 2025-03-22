@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="{% url 'home' %}" class="text-2xl font-bold text-blue-600">MyBrand</a>
+                <!-- Hamburger Menu for Mobile -->
+                <button class="md:hidden focus:outline-none" id="nav-toggle">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <!-- Menu Items -->
+                <div class="hidden md:flex space-x-6" id="nav-menu">
+                    <a href="{% url 'home' %}" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                    <a href="{% url 'about' %}" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile Menu (Hidden by Default) -->
+            <div class="md:hidden hidden flex-col space-y-4 mt-4" id="mobile-menu">
+                <a href="{% url 'home' %}" class="text-gray-600 hover:text-blue-600 transition">Home</a>
+                <a href="{% url 'about' %}" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Features</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 pt-20 md:pt-24">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
+                Welcome to My Landing Page
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+                Build amazing things with us and unlock your potential in a world of innovation.
+            </p>
+            <a href="{% url 'about' %}" 
+               class="inline-block bg-white text-blue-600 px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold
+               hover:bg-blue-600 hover:text-white transition duration-300 transform hover:scale-105">
+                Discover More
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10 md:mb-12">Our Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-3xl md:text-4xl mb-4">🚀</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Fast Performance</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Experience lightning-fast solutions built for speed.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-3xl md:text-4xl mb-4">🔒</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Secure Platform</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Your data is safe with our top-tier security.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-3xl md:text-4xl mb-4">🌐</div>
+                    <h3 class="text-lg md:text-xl font-semibold mb-2">Global Reach</h3>
+                    <p class="text-gray-600 text-sm md:text-base">Connect with a worldwide community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-12 md:py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-base sm:text-lg md:text-xl mb-8 opacity-90 max-w-xl mx-auto">
+                Join us today and start building something extraordinary.
+            </p>
+            <a href="{% url 'about' %}" 
+               class="inline-block bg-white text-purple-600 px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold
+               hover:bg-purple-600 hover:text-white transition duration-300">
+                Join Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-6 md:py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-lg md:text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-sm md:text-base mb-4">Email: hello@mybrand.com | Phone: +1 234 567 890</p>
+            <p class="text-sm md:text-base">© 2025 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Toggle Mobile Menu -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tailwind Custom Animation
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
